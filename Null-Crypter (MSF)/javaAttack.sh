@@ -1,6 +1,5 @@
 #!/bin/sh
 #Null-Sec Scr!pts
-
 clear
 echo "*****************************************"
 echo ""                                       ""

