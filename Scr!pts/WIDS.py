@@ -716,16 +716,16 @@ def GetAppName():
 
 
 def DisplayAppDetail():
-    print "*****************************************"
-    print ""                                       ""
-    print "    /\ \ \_   _| | |     / _\ ___  ___   "
-    print "   /  \/ / | | | | |_____\ \ / _ \/ __|  "
-    print "  / /\  /| |_| | | |_____|\ \  __/ (__   "
-    print "  \_\ \/  \__,_|_|_|     \__/\___|\___|  "
-    print ""                                       ""
-    print "*****************************************"
-    print "   Wireless Intrusion Detection System   "
-    print "*****************************************"
+    print fcolor.SBlue +  "*************************************************"
+    print fcolor.SBlue +  ""                                               ""
+    print fcolor.SBlue +  "        /\ \ \_   _| | |     / _\ ___  ___       "
+    print fcolor.SBlue +  "       /  \/ / | | | | |_____\ \ / _ \/ __|      "
+    print fcolor.SBlue +  "      / /\  /| |_| | | |_____|\ \  __/ (__       "
+    print fcolor.SBlue +  "      \_\ \/  \__,_|_|_|     \__/\___|\___|      "
+    print fcolor.SBlue +  ""                                               ""
+    print fcolor.SBlue +  "*************************************************"
+    print fcolor.SBlue +  "       Wireless Intrusion Detection System       "
+    print fcolor.SBlue +  "*************************************************"
 
 def DisplayDisclaimer():
     printc ("!!!","Legal  Disclaimer :- " + fcolor.Red + "FOR EDUCATIONAL PURPOSES ONLY !!","")
@@ -2392,7 +2392,7 @@ def CheckRequiredFiles():
         exit (0)
     if IsFileDirExist(macoui)!="F":
         printc ("!!!","MAC OUI Database not found !","")
-        printc ("  ",fcolor.SGreen + "You can download it @ " + fcolor.SBlue + "https//raw2.github.com/SYWorks/wireless-ids/master/mac-oui.db\n","")
+        printc ("  ",fcolor.SGreen + "You can download it @ " + fcolor.SBlue + "https//raw2.github.com/Null-Sec/WIDS/master/mac-oui.db\n","")
 
 def AddTime(tm, secs):
     fulldate = datetime.datetime(tm.year, tm.month, tm.day, tm.hour, tm.minute, tm.second)
@@ -4271,8 +4271,8 @@ InfoIPVia=""
 InfoIPFwd=""
 TimeStart=""
 MyMAC=""
-appdir="/SYWorks/WIDS/"
-macoui="/SYWorks/WIDS/mac-oui.db"
+appdir="/Null-Sec/NSTools/WIDS/"
+macoui="/Null-Sec/NSTools/WIDS/mac-oui.db"
 PathList = ['tmp/']
 tmpdir=appdir + "tmp/"
 #global PrevIconCount

@@ -6,18 +6,24 @@ import os
 import commands
 import subprocess
 import random 
+
 os.system("clear")
 os.chdir("/opt/metasploit/msf3/")
-print "*****************************************"
-print ""                                       ""
-print "    /\ \ \_   _| | |     / _\ ___  ___   "
-print "   /  \/ / | | | | |_____\ \ / _ \/ __|  "
-print "  / /\  /| |_| | | |_____|\ \  __/ (__   "
-print "  \_\ \/  \__,_|_|_|     \__/\___|\___|  "
-print ""                                       ""
-print "*****************************************"
-print "         Crypter for metasploit	        "
-print "*****************************************"
+
+class fcolor:
+    SBlue='\033[0;34m'
+
+print fcolor.SBlue +  "*************************************************"
+print fcolor.SBlue +  ""                                               ""
+print fcolor.SBlue +  "        /\ \ \_   _| | |     / _\ ___  ___       "
+print fcolor.SBlue +  "       /  \/ / | | | | |_____\ \ / _ \/ __|      "
+print fcolor.SBlue +  "      / /\  /| |_| | | |_____|\ \  __/ (__       "
+print fcolor.SBlue +  "      \_\ \/  \__,_|_|_|     \__/\___|\___|      "
+print fcolor.SBlue +  ""                                               ""
+print fcolor.SBlue +  "*************************************************"
+print fcolor.SBlue +  "                 WPA-BruteForcer                 "
+print fcolor.SBlue +  "*************************************************"
+
 host = raw_input("lhost (e for external ip) ?").strip()
 if host == 'e':
 	os.system("curl ifconfig.me >> ip.txt")
