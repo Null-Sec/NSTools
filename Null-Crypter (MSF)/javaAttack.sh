@@ -1,4 +1,6 @@
 #!/bin/sh
+#Null-Sec Scr!pts
+
 clear
 echo "*****************************************"
 echo ""                                       ""
@@ -9,7 +11,7 @@ echo "  \_\ \/  \__,_|_|_|     \__/\___|\___|  "
 echo ""                                       ""
 echo ""
 echo "*****************************************"
-echo "         FUD java apllet attack          "
+echo "         FUD java applet attack          "
 echo "*****************************************"
 echo "1) site cloner "
 echo "2) costum import (/var/www/index.html)"
