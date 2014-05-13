@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#coding: utf-8
+#Coding: utf-8
 #Null-Sec Scr!pts
 from struct import *
 import os
@@ -21,7 +21,7 @@ print fcolor.SBlue +  "      / /\  /| |_| | | |_____|\ \  __/ (__       "
 print fcolor.SBlue +  "      \_\ \/  \__,_|_|_|     \__/\___|\___|      "
 print fcolor.SBlue +  ""                                               ""
 print fcolor.SBlue +  "*************************************************"
-print fcolor.SBlue +  "                 WPA-BruteForcer                 "
+print fcolor.SBlue +  "                   Null-Crypter                  "
 print fcolor.SBlue +  "*************************************************"
 
 host = raw_input("lhost (e for external ip) ?").strip()

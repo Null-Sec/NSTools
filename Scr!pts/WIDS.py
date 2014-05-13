@@ -1,4 +1,5 @@
 #! /usr/bin/python
+#Coding: utf-8
 #Null-Sec Scr!pts
 
 appver="1.0, R.9"
@@ -117,7 +118,6 @@ class fcolor:
     BGIPink='\033[105m'
     BGICyan='\033[106m'
     BGIWhite='\033[107m'
-
 
 
 def read_a_key():
@@ -578,7 +578,7 @@ def GetUpdate(ExitMode):
     if ExitMode=="":
         ExitMode="1"
 
-    github="https://github.com/Null-Sec/NSTools/WIDS.git"
+    github="https://github.com/Null-Sec/NSTools/Scr!pts/WIDS.git"
     Updatetmpdir="/tmp/git-update/"
     DownloadedScriptLocation=Updatetmpdir + ScriptName
     dstPath=os.getcwd() + "/"

@@ -1,10 +1,12 @@
 #! /usr/bin/python
-#apt-get install python-socksipy
+#Coding: utf-8
 #Null-Sec SCr!pts
+#apt-get install python-socksipy
 
-appver="1.0, R.7"
+
+appver="1.0, Beta"
 apptitle="WPA-BruteForcer"
-appDesc="- Another form of WPA Testing"
+appDesc="Another form of WPA Testing"
 
 
 import sys,os
@@ -117,9 +119,9 @@ class fcolor:
 def ShowTutorial1():
     DrawLine("-",fcolor.CReset + fcolor.Black,"")
     print ""
-    print fcolor.BRed + "Tutorial 1 - New Interactive Mode"
+    print fcolor.BRed + "Tutorial 1 - New Interactive Session"
     print ""
-    print fcolor.SWhite + "root@Null-Sec: /NSTools/WPA-BF# " + fcolor.BWhite + "./WPA-BF.py " + fcolor.BRed + "\t<-- Enter the application name"
+    print fcolor.SWhite + "root@Null-Sec: /NSTools/WPA-BF/#" + fcolor.BWhite + "./WPA-BF.py " + fcolor.BRed + "\t<-- Enter the application name"
     print fcolor.SWhite + ""
     print fcolor.SWhite + "[i]  Entering Interactive Mode.." + fcolor.BRed + "\t<-- If nothing specified on command line, "
     print fcolor.SWhite + "     Started	: 2014-01-06 01:27:39" + fcolor.BRed + "\t    it will enter the Interactive Mode"
@@ -222,14 +224,14 @@ def ShowTutorial1():
     print fcolor.SWhite + "     Stopped	: 2014-01-06 01:33:23"
     print fcolor.SWhite + "     Time Spent	: 0:05:43.69"
     print fcolor.SWhite + ""
-    print fcolor.SWhite + "root@Null-Sec: /NSTools/WPA-BF#"                                                                         
+    print fcolor.SWhite + "root@Null-Sec: /NSTools/WPA-BF/#"                                                                         
 
 
     DrawLine("-",fcolor.CReset + fcolor.Black,"")
     print ""
-    print fcolor.BRed + "Tutorial 2 - Continue from last scan"
+    print fcolor.BRed + "Tutorial 2 - Continue from last Session"
     print ""
-    print fcolor.SWhite + "root@Null-Sec: /NSTools/WPA-BF## " + fcolor.BWhite + "./WPA-BF.py " + fcolor.BRed + "\t\t<-- Enter the application name"
+    print fcolor.SWhite + "root@Null-Sec: /NSTools/WPA-BF#/" + fcolor.BWhite + "./WPA-BF.py " + fcolor.BRed + "\t\t<-- Enter the application name"
     print fcolor.SWhite + ""
     print fcolor.SWhite + "[i]  Entering Interactive Mode.."
     print fcolor.SWhite + "     Started	: 2014-01-06 01:36:48"
@@ -300,7 +302,7 @@ def ShowTutorial1():
     print fcolor.SWhite + "     Stopped	: 2014-01-06 01:40:36"
     print fcolor.SWhite + "     Time Spent	: 0:03:47.50"
     print fcolor.SWhite + ""
-    print fcolor.SWhite + "root@Null-Sec: /NSTools/WPA-BF#"
+    print fcolor.SWhite + "root@Null-Sec: /NSTools/WPA-BF/#"
 
 def read_a_key():
     stdinFileDesc = sys.stdin.fileno()
@@ -815,7 +817,6 @@ def Run(cmdRun,Suppress):
     readout=ps.stdout.read()
     return str(readout)
 
-
 def TimerApp(cmdLine,DelaySeconds,ShowDisplay):
     import os
     returncode=-1
@@ -892,7 +893,6 @@ def CheckLinux():
         printc ("!!!","This application only works on Linux.","")
         exit(1)
 
-
 def CheckPyVersion(MinPyVersion):
     """
         Function : Check for current Python Version. 
@@ -924,7 +924,6 @@ def GetAppName():
     FullScriptName=str(appdir) + "/" + str(ScriptName)
     printd("FullScriptName : " + FullScriptName)
     printd("ScriptName : " + str(ScriptName))
-
 
 def DisplayAppDetail():
     print fcolor.SBlue +  "*************************************************"
@@ -1146,7 +1145,6 @@ def GetParameter(cmdDisplay):
                             Err=1
 
 
-
                 elif arg=="-i" or arg=="--iface":
                     i=i2
                     if i2str=="":
@@ -1206,7 +1204,6 @@ def GetParameter(cmdDisplay):
             result=DisplayTimeStamp("start","")
             print ""
 
-
 def CheckMAC(MACAddr):
     import string
     result=""
@@ -1257,6 +1254,7 @@ def CheckAppLocation():
                 result=MakeTree(newPath,"")
     if cpath==1:
         print ""
+
 def ServiceCheck(SvrName,DisplaySvrName, cmdPrompt,cmdDisplay):
     """
         SvrName          = Actual service name
@@ -1335,7 +1333,6 @@ def ServiceCheck(SvrName,DisplaySvrName, cmdPrompt,cmdDisplay):
                     else:
                         printc ("  ",fcolor.SRed + DisplaySvrName + " failed to stop..","")
 
-
 def ServiceCall(SvrName):
     result=os.system("service " + SvrName + " status > /dev/null 2>&1")
     if result==0:
@@ -1345,8 +1342,7 @@ def ServiceCall(SvrName):
     if result==256:
         CStatus="Unrecognised"
     return CStatus;
-
-                   
+                 
 def DisplayTimeStamp(cmdDisplayType,cmdTimeFormat):
     global TimeStart
     global TimeStop
@@ -1579,7 +1575,6 @@ def GetInterfaceList(cmdMode):
                 UpDownList.append(IFUP)
                 ISerialList.append(str(IFaceCount))
     return IFaceCount;
-
 
 def RemoveColor(InText):
     if InText!="":
@@ -1829,8 +1824,6 @@ def CombineListing(List1, List2, List3, List4, List5, List6, List7, List8):
         i = i + 1
     return i;
 
-
-
 def QuestionFromList(ListTitle,ListTitleSpace,ListUse,AskQuestion,RtnType):
 #   RtnType "0" = Return Selected Number
 #           "1" = Return first field of selected list number
@@ -1920,7 +1913,6 @@ def GenerateTmpFile(tmpdir,FilePrefix, FileExt,CreateFile,ShowDisplay):
         printc (" ",fcolor.SGreen + "Generated Temporary File [ " + fcolor.SRed + str(temp.name) + fcolor.SGreen + " ] ...","")
     return temp.name
 
-
 def GenerateTmpDir(tmpdir,DirPrefix,CreateDir,ShowDisplay):
     import tempfile
     if ShowDisplay=="":
@@ -1956,6 +1948,7 @@ def GenerateTmpDir(tmpdir,DirPrefix,CreateDir,ShowDisplay):
     if ShowDisplay=="1":
         printc (" ",fcolor.SGreen + "Generated Temporary Directory [ " + fcolor.SRed + str(directory_name) + fcolor.SGreen + " ] ...","")
     return temp.name 
+
 def DelFile(strFileName,ShowDisplay):
     import glob, os
     RtnResult=False
@@ -2292,7 +2285,6 @@ def UninstallApplication():
         printc ("i",fcolor.BWhite + "Uninstall aborted..","")
         exit(0)
 
-
 def GetIWList(cmdMode,SELECTED_IFACE,RETRY):
     global AP_BSSIDList
     global AP_FREQList
@@ -2575,7 +2567,6 @@ def SelectInterfaceToUse():
     return SELECTED_IFACE;
 
 def SelectESSIDFromList():
-
     Result = CombineListing(AP_ESSIDList, AP_BSSIDList,AP_ENCTYPEList,AP_CHANNELList,AP_FREQList,AP_SIGNALList,AP_QUALITYList,"")
     TitleList=['sn','ESSID','BSSID','ENC','CH','Freq', 'Signal', 'Quality',]
     Result=QuestionFromList(TitleList, MergedSpaceList,MergedList,"Select the ESSID from the list","1")
@@ -2610,7 +2601,6 @@ def ConvertByte(ibytes):
     if i >= len(lst):
         i = len(lst) - 1
     return ('%.2f' + " " + lst[i]) % (ibytes/math.pow(1024, i))
-
 
 def GetFileLine(filename,omitblank):
     global TotalLine
@@ -2672,7 +2662,6 @@ class Command(object):
             self.process.terminate()
             thread.join()
 	    printd ("Process Terminated")
-
 
 def TryKey(resultfile,SEEKED_PASSPHRASE,TIMEOUT):
     wpas_conf=tmpdir + "wpa_supplicant.conf"
@@ -2851,7 +2840,6 @@ def ChangeHex(n):
     return Result
 
 def SpoofMAC(SELECTED_IFACE,ASSIGNED_MAC):
-
     if ASSIGNED_MAC=="":
         H1="00"
         H2=ChangeHex(randrange(255))
@@ -2913,7 +2901,7 @@ InfoIP=""
 InfoIPVia=""
 InfoIPFwd=""
 TimeStart=""
-appdir="/Null-Sec/NSTools/WPA-BF"
+appdir="/Null-Sec/NSTools/WPA-BF/"
 PathList = ['tmp/']
 tmpdir=appdir + "tmp/"
 PrevIconCount=0
@@ -3159,15 +3147,12 @@ try:
     print ""
     printc ("i",fcolor.BRed + "Begin testing...","")
 
-
     if PrevLogFound==0:
         BruteForceWPA("")
         exit(0)
     else:
        BruteForceWPA(LastPass)
        exit(0)
-
-
 
 except (KeyboardInterrupt, SystemExit):
     printd("KeyboardInterrupt - " + str(KeyboardInterrupt) + "\n        SystemExit - " + str(SystemExit))
