@@ -751,7 +751,7 @@ def GetUpdate(ExitMode):
     if ExitMode=="":
         ExitMode="1"
 
-    github="https://github.com/Null-Sec/NSTools/Scr!pts/WPA-BF.git"
+    github="https://github.com/Null-Sec/NSTools/scripts/WPA-BF.py
     Updatetmpdir="/tmp/git-update/"
     DownloadedScriptLocation=Updatetmpdir + ScriptName
     dstPath=os.getcwd() + "/"
